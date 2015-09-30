@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Test single application</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <base href="/dev/">
+        <link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    </head>
+    <body data-ng-app="app">
+        <div class="container" data-ng-controller="CommonController as cmmnc">
+            <div data-ng-if="cmmnc.authService.isAuthorized()" class="row">
+                <div class="col-md-4">
+                    Hello, <b><span data-ng-bind="cmmnc.authService.getUserName()"></span></b>
+                    <br>
+                    <a href="#" data-ng-click="cmmnc.logOut()">Logout</a>
+                </div>
+            </div>
+            <div data-ui-view></div>
+        </div>
+
+        <script src="../bower_components/angular/angular.js"></script>
+        <script src="../bower_components/angular-mocks/angular-mocks.js"></script>
+        <script src="../bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+        <script src="../bower_components/angular-cookies/angular-cookies.js"></script>
+
+        <script src="js/modules/user/user.module.js"></script>
+        <script src="js/modules/user/controllers/ListController.js"></script>
+        <script src="js/modules/user/controllers/ProfileController.js"></script>
+        <script src="js/modules/user/controllers/LoginController.js"></script>
+        <script src="js/modules/user/services/userService.js"></script>
+        <script src="js/modules/user/services/authService.js"></script>
+        <script src="js/modules/user/services/accessPermissionsService.js"></script>
+        <script src="js/modules/user/services/authService.js"></script>
+        <script src="js/modules/user/user.config.js"></script>
+
+        <script src="js/modules/apiMocks/apiMocks.module.js"></script>
+        
+        <script src="js/app.module.js"></script>
+        <script src="js/app.config.js"></script>
+
+        <script src="js/common/services/llcCache.js"></script>
+        <script src="js/common/services/responseInterceptor.js"></script>
+        <script src="js/common/directives/llcPagination.js"></script>
+        <script src="js/common/directives/llcBackButton.js"></script>
+        <script src="js/common/controllers/CommonController.js"></script>
+
+        <script src="js/common/filters.js"></script>
+        <script src="js/common/constatnts.js"></script>
+    </body>
+</html>

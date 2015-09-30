@@ -1,0 +1,9 @@
+<nav>
+    <ul class="pagination">
+        <li data-ng-repeat="page in pages" data-ng-class="{
+            'active': page.current
+        }">
+            <a data-ng-href="{{page.url}}">{{page.number}}</a>
+        </li>
+    </ul>
+</nav>

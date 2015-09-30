@@ -1,0 +1,8 @@
+{
+    "profileData": {
+        "id": 1,
+        "name": "New user name",
+        "login": "oldlogin",
+        "email": "oldemail@gmail.com"
+    }
+}

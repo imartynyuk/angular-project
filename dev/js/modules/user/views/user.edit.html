@@ -1,0 +1,36 @@
+<div class='row'>
+    <div class='col-md-8'>
+        <h1>Edit user <span data-ng-if='prflc.currUserName'>'{{prflc.currUserName}}'</span></h1>
+
+        <form name='editForm' data-ng-submit="prflc.saveUserData()">
+            <div class="form-group">
+                <label for="userName">User name:</label>
+                <input type="text" class="form-control" name='userName' placeholder="User name" 
+                       data-ng-model="prflc.userInfo.name"
+                       required>
+            </div>
+
+            <div class="form-group">
+                <label for="userLogin">Login:</label>
+                <input type="text" class="form-control" name='userLogin' placeholder="Login" 
+                       data-ng-model="prflc.userInfo.login"
+                       required>
+            </div>
+
+            <div class="form-group">
+                <label for="userEmail">Email:</label>
+                <input type="email" class="form-control" name='userEmail' placeholder="Email" 
+                       data-ng-model="prflc.userInfo.email"
+                       required>
+            </div>
+
+            <button type="submit" class="btn btn-success">Save</button>
+            <a href="#" class="btn btn-default"
+                    data-llc-back-button>Back</a>
+        </form>
+        <p></p>
+        <div class="alert alert-success" role="alert" data-ng-if="prflc.dataSaved">
+            Data saved successfully.
+        </div>
+    </div>
+</div>

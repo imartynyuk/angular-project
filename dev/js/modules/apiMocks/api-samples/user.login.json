@@ -1,0 +1,9 @@
+{
+    "profileData": {
+        "id": 1,
+        "name": "Test User",
+        "login": "testuser",
+        "email": "testuser@gmail.com"
+    },
+    "access_token": "18f46987a80517f68ac62934afebdd1d"
+}
